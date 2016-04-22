@@ -7,7 +7,7 @@
     android:background="@drawable/rsz_background"
     android:scaleType="fitXY">
 
-    <Button
+<!--    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="shake"
@@ -52,5 +52,5 @@
         android:paddingLeft="15dp"
         android:hint="Ask a question..."
         android:contextClickable="true" />
-
+-->
 </RelativeLayout>

@@ -2,6 +2,7 @@ package com.example.stuart.magic8ball;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -44,6 +45,73 @@ public class Magic8Ball extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        RelativeLayout layout = new RelativeLayout(this);
+        layout.setBackgroundResource(R.drawable.rsz_background);
+
+        question = new EditText(this);
+        question.setHint("Ask a question...");
+        //question.setId(1);
+        RelativeLayout.LayoutParams qParams = new
+                RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.FILL_PARENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        qParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+        // aParams.addRule(RelativeLayout.CENTER_VERTICAL);
+        question.setSingleLine(true);
+        question.setLayoutParams(qParams);
+        layout.addView(question);
+
+        someButton = new Button(this);
+        someButton.setText("Shake");
+        someButton.setBackgroundResource(R.drawable.rsz_shakebutton);
+        someButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeMessage(v);
+            }
+        });
+
+        RelativeLayout.LayoutParams bParams = new
+                RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.FILL_PARENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        bParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        someButton.setLayoutParams(bParams);
+
+        layout.addView(someButton);
+
+        pic = new ImageView(this);
+        pic.setImageResource(R.drawable.rsz_circle1);
+
+        RelativeLayout.LayoutParams pParams = new
+                RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        pParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+        pParams.addRule(RelativeLayout.BELOW,1);
+        pParams.addRule(RelativeLayout.ABOVE,2);
+
+        pic.setLayoutParams(pParams);
+
+        layout.addView(pic);
+
+
+        answer = new TextView(this);
+        answer.setText("Test");
+        answer.setTextSize(20);
+        answer.setTextColor(Color.parseColor("#FFFFFF"));
+        RelativeLayout.LayoutParams aParams = new
+                RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        aParams.addRule(RelativeLayout.CENTER_HORIZONTAL,RelativeLayout.TRUE);
+        aParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
+
+        answer.setLayoutParams(aParams);
+        layout.addView(answer);
+
+
+
         Log.i("Name","Mingzhe");
 
         final double age = 28;
@@ -71,13 +139,13 @@ public class Magic8Ball extends AppCompatActivity {
             Log.i("Answer", newModel.reresponseArray[i]);
         }
 
-        setContentView(R.layout.activity_magic8_ball);
+        setContentView(layout);
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
-        someButton = (Button) findViewById(R.id.button);
+        /*someButton = (Button) findViewById(R.id.button);
         pic = (ImageView) findViewById(R.id.imageView);
         answer = (TextView) findViewById(R.id.textView);
-        question = (EditText) findViewById(R.id.searchbox);
+        question = (EditText) findViewById(R.id.searchbox);*/
         question.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
