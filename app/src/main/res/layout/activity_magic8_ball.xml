@@ -10,7 +10,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="shake"
+        android:text="History"
         android:id="@+id/button"
         android:background="@drawable/rsz_shakebutton"
         android:layout_alignWithParentIfMissing="false"
@@ -18,7 +18,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:imeOptions="actionDone"
-       android:onClick="changeMessage"/>
+       android:onClick="toHistoryActivity"/>
 
     <ImageView
         android:layout_width="350dp"
