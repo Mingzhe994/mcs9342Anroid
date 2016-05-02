@@ -3,16 +3,17 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/questionView" >
-    </TextView>
-
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/answerView" >
+        android:layout_width="162dp"
+        android:layout_height="33dp"
+        android:id="@+id/questionView">
     </TextView>
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="146dp"
+        android:layout_height="33dp"
+        android:id="@+id/answerView">
+    </TextView>
+
 </LinearLayout>

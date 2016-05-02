@@ -64,7 +64,7 @@ public class Magic8Ball extends AppCompatActivity {
     Button someButton;
     ImageView pic;
     EditText question;
-    String[] extraR = {"Godfather","StonyBrook"};
+    String[] extraR = {"battlec","dropship"};
     int counter;
     ArrayList<QuestionResponseModel> questionArray = new ArrayList<QuestionResponseModel>();
 

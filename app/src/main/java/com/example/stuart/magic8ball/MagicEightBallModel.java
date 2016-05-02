@@ -5,7 +5,7 @@ package com.example.stuart.magic8ball;
  */
 public class MagicEightBallModel extends Object{
 
-    final static String[] initailRespenseArray = {"Dad","And","Mom"};
+    final static String[] initailRespenseArray = {"frigate","marine","tank"};
     String[] reresponseArray;
 
     public MagicEightBallModel(){
